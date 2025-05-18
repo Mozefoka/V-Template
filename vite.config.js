@@ -7,4 +7,14 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                  @import "@/styles/base/_mixins.scss";
+                  @import "@/styles/base/_variables.scss";
+                `
+            },
+        },
+    },
 })
